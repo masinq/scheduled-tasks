@@ -4,14 +4,14 @@ import smtplib
 
 from appier import email_parts
 
-MY_EMAIL = "matthewsinquefield@gmail.com"
-PASSWORD = "dlrn wbqp tvpx ayjg"
+MY_EMAIL = os.environ.get(OMW_MY_EMAIL)
+PASSWORD = os.environ.get(OMW_PASSWORD)
 
 
 
 
 
-api_key = '1cb689045543cf590a9d15213b27f969'
+api_key = os.environ.get(OMW_API_KEY)
 lat = 33.28
 lon = -81.37
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast?"
