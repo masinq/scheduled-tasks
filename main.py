@@ -2,7 +2,6 @@
 import requests
 import smtplib
 
-from appier import email_parts
 
 MY_EMAIL = os.environ.get(OMW_MY_EMAIL)
 PASSWORD = os.environ.get(OMW_PASSWORD)
