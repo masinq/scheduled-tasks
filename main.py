@@ -4,8 +4,8 @@ import smtplib
 
 
 MY_EMAIL = os.environ.get(OMW_MY_EMAIL)
-PASSWORD = os.environ.get(OMW_PASSWORD)
-
+PASSWORD = os.environ.get(OMW_MY_PASSWORD)
+TO_EMAIL = MY_EMAIL
 
 
 
@@ -43,7 +43,7 @@ if is_it_raining():
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
         connection.login(user=MY_EMAIL, password=PASSWORD)
-        connection.sendmail(from_addr=MY_EMAIL,
+        connection.sendmail(from_addr=TO_EMAIL,
                             to_addrs='matthewsinquefield@gmail.com',
                             msg=f"Subject:Rain Ahead!\n\n{message}"
                             )
